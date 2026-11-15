@@ -27,7 +27,9 @@
 <meta name="twitter:description" content="Software developer in Lima, Peru. Web apps, 3D/interactive experiences and AI automation. Open to remote roles.">
 <meta name="twitter:image" content="https://adrian52507.github.io/portafolio/assets/img/og.jpg"><!-- [SITE_URL] -->
 
-<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon-192.png">
+<link rel="apple-touch-icon" href="assets/img/favicon-192.png">
 <link rel="preload" as="image" href="assets/img/hero-back.webp" type="image/webp" fetchpriority="high">
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/inter-tight-latin.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/archivo-latin.woff2" crossorigin>
@@ -162,9 +164,8 @@ html.i18n-out [data-i18n],html.i18n-out [data-i18n-html]{opacity:0}
 
 .about{left:calc(57 * var(--u));top:calc(458 * var(--u));width:calc(380 * var(--u))}
 @media (max-width:1199px){.copy br{display:none}}
-.label{font-size:max(calc(12 * var(--u)),11px);letter-spacing:.04em;text-transform:uppercase}
-.about .copy{margin-top:calc(16 * var(--u));font-size:max(calc(14 * var(--u)),11px);line-height:1.45}
-.btn-cv{position:absolute;top:calc(126 * var(--u));left:0;height:calc(42 * var(--u));padding:0 calc(20 * var(--u));font-size:max(calc(14 * var(--u)),11px)}
+.about .copy{font-size:max(calc(14 * var(--u)),11px);line-height:1.45}
+.btn-cv{position:absolute;top:calc(96 * var(--u));left:0;height:calc(42 * var(--u));padding:0 calc(20 * var(--u));font-size:max(calc(14 * var(--u)),11px)}
 
 /* photo */
 .photo-frame{left:calc(338 * var(--u));top:calc(28 * var(--u));width:calc(764 * var(--u));height:calc(1024 * var(--u));
@@ -368,8 +369,7 @@ html.i18n-out [data-i18n],html.i18n-out [data-i18n-html]{opacity:0}
   .title{left:calc(40 * var(--u));top:calc(190 * var(--u));font-size:calc(56 * var(--u))}
   .title .yr{left:calc(320 * var(--u));top:calc(8 * var(--u))}
   .about{left:calc(40 * var(--u));top:calc(380 * var(--u));width:calc(300 * var(--u))}
-  .about .copy{margin-top:calc(12 * var(--u))}
-  .btn-cv{top:calc(100 * var(--u))}
+  .btn-cv{top:calc(74 * var(--u))}
   .photo-frame{left:calc(360 * var(--u));top:calc(30 * var(--u));width:calc(520 * var(--u));height:calc(693 * var(--u));
     -webkit-mask-image:linear-gradient(90deg,transparent,#000 10%),linear-gradient(180deg,#000 88%,transparent);
     mask-image:linear-gradient(90deg,transparent,#000 10%),linear-gradient(180deg,#000 88%,transparent);
@@ -436,7 +436,7 @@ html.i18n-out [data-i18n],html.i18n-out [data-i18n-html]{opacity:0}
   .title{margin-top:calc(10 * var(--u));font-size:calc(54 * var(--u))}
   .title .yr{left:calc(308 * var(--u));top:calc(6 * var(--u))}
   .about{width:auto;margin-top:calc(26 * var(--u))}
-  .about .copy{font-size:max(calc(15 * var(--u)),11px);margin-top:calc(10 * var(--u))}
+  .about .copy{font-size:max(calc(15 * var(--u)),11px)}
   .btn-cv{position:relative;top:auto;margin-top:calc(18 * var(--u));height:max(calc(44 * var(--u)),44px)}
   .photo-frame{margin:calc(24 * var(--u)) calc(-20 * var(--u)) 0;width:auto;height:calc(470 * var(--u));overflow:hidden;
     -webkit-mask-image:linear-gradient(180deg,transparent,#000 9%,#000 84%,transparent);mask-image:linear-gradient(180deg,transparent,#000 9%,#000 84%,transparent)}
@@ -531,7 +531,6 @@ html.i18n-out [data-i18n],html.i18n-out [data-i18n-html]{opacity:0}
     </div>
 
     <div class="about" data-rise>
-      <p class="label" data-i18n="about.label">● (SOBRE MÍ)</p>
       <p class="copy" data-i18n-html="about.copy">Desarrollador de software que crea apps web, <br>herramientas con IA y experiencias interactivas.</p>
       <a class="btn btn-cv" href="assets/cv/Adrian_Cornejo_CV_ES.pdf" download data-i18n="cv">Descargar CV ↗</a>
     </div>
@@ -722,7 +721,6 @@ const STRINGS = {
     'nav.home': 'Inicio', 'nav.about': 'Sobre mí', 'nav.work': 'Proyectos', 'nav.contact': 'Contacto',
     'cta.contact': 'Contacto ↗',
     'clock.city': 'Lima, Perú',
-    'about.label': '● (SOBRE MÍ)',
     'about.copy': 'Desarrollador de software que crea apps web, <br>herramientas con IA y experiencias interactivas.',
     'cv': 'Descargar CV ↗',
     'cv.file': 'assets/cv/Adrian_Cornejo_CV_ES.pdf',
@@ -763,7 +761,6 @@ const STRINGS = {
     'nav.home': 'Home', 'nav.about': 'About', 'nav.work': 'Work', 'nav.contact': 'Contact',
     'cta.contact': 'Contact ↗',
     'clock.city': 'Lima, Peru',
-    'about.label': '● (ABOUT)',
     'about.copy': 'Software developer building web apps, <br>AI-powered tools and interactive experiences.',
     'cv': 'Download CV ↗',
     'cv.file': 'assets/cv/Adrian_Cornejo_CV_EN.pdf',
