@@ -90,7 +90,13 @@ html,body{overflow-x:clip}
 html{scrollbar-width:none}                 /* page still scrolls, the bar is just not drawn */
 html::-webkit-scrollbar{width:0;height:0;display:none}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
-body{margin:0;background:var(--black);color:var(--text);
+/* Browser chrome tint (notch / status bar / bottom bar). Safari 26+ ignores theme-color and
+   takes the tint from the html/body background, so the page background follows the section
+   under the top edge: hero paper at the top, black once the hero has scrolled away
+   (html.chrome-dark is toggled by initChromeTint). Every section paints its own background. */
+html{background:var(--paper)}
+html.chrome-dark,html.chrome-dark body{background:#000}
+body{margin:0;background:var(--paper);color:var(--text);
   font-family:'Inter Tight',system-ui,-apple-system,'Segoe UI',sans-serif;font-weight:500;
   -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
 img,video,svg{display:block;max-width:none}
@@ -1209,7 +1215,31 @@ const YEAR = new Date().getFullYear();
 $('.title .yr').textContent = `(’${String(YEAR).slice(-2)})`;
 $('.foot .year').textContent = YEAR;
 
+/* ---------- browser chrome tint (notch / status bar) ----------
+   Safari 26+ tints its bars from the html/body background; older Safari and
+   Chrome Android read <meta name="theme-color">. Keep both in sync with what is
+   under the top edge: the hero's paper grey, or black once the hero is gone. */
+function initChromeTint() {
+  const root = document.documentElement;
+  const hero = $('.hero');
+  const meta = $('meta[name="theme-color"]');
+  const paper = getComputedStyle(root).getPropertyValue('--paper').trim() || '#b8b8b8';
+  let dark = null, raf = 0;
+  const update = () => {
+    raf = 0;
+    const d = hero.getBoundingClientRect().bottom <= 1;
+    if (d === dark) return;
+    dark = d;
+    root.classList.toggle('chrome-dark', d);
+    if (meta) meta.setAttribute('content', d ? '#000000' : paper);
+  };
+  addEventListener('scroll', () => { if (!raf) raf = requestAnimationFrame(update); }, { passive: true });
+  addEventListener('resize', update);
+  update();
+}
+
 /* ---------- boot ---------- */
+initChromeTint();
 applyStrings();
 intro();
 initNowBuilding();
