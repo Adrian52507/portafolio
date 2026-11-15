@@ -3,28 +3,28 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Adrian Cornejo — Desarrollador Full-Stack</title>
-<meta name="description" content="Desarrollador full-stack en Lima, Perú. Apps web, experiencias 3D/interactivas y automatización con IA. Disponible para roles remotos.">
+<title>Adrian Cornejo - Desarrollador de Software</title>
+<meta name="description" content="Desarrollador de software en Lima, Perú. Apps web, experiencias 3D/interactivas y automatización con IA. Disponible para roles remotos.">
 <meta name="theme-color" content="#b8b8b8">
 
 <!-- ============================================================
-     SITE URL — https://adrian52507.github.io/portafolio/
+     SITE URL - https://adrian52507.github.io/portafolio/
      Social tags must be absolute. If a custom domain is used later,
      change the base URL in the three tags marked [SITE_URL] below.
      Every other path in this page is relative (served from /portafolio/).
      OG / Twitter copy stays in English on purpose.
      ============================================================ -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Adrian Cornejo — Full-Stack Developer">
-<meta property="og:description" content="Full-stack developer in Lima, Peru. Web apps, 3D/interactive experiences and AI automation. Open to remote roles.">
+<meta property="og:title" content="Adrian Cornejo - Software Developer">
+<meta property="og:description" content="Software developer in Lima, Peru. Web apps, 3D/interactive experiences and AI automation. Open to remote roles.">
 <meta property="og:url" content="https://adrian52507.github.io/portafolio/"><!-- [SITE_URL] -->
 <meta property="og:image" content="https://adrian52507.github.io/portafolio/assets/img/og.jpg"><!-- [SITE_URL] -->
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Adrian Cornejo, Full-Stack Developer — Lima, PE">
+<meta property="og:image:alt" content="Adrian Cornejo, Software Developer - Lima, PE">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Adrian Cornejo — Full-Stack Developer">
-<meta name="twitter:description" content="Full-stack developer in Lima, Peru. Web apps, 3D/interactive experiences and AI automation. Open to remote roles.">
+<meta name="twitter:title" content="Adrian Cornejo - Software Developer">
+<meta name="twitter:description" content="Software developer in Lima, Peru. Web apps, 3D/interactive experiences and AI automation. Open to remote roles.">
 <meta name="twitter:image" content="https://adrian52507.github.io/portafolio/assets/img/og.jpg"><!-- [SITE_URL] -->
 
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23dadada'/%3E%3Cpath d='M5 27 15 5l3.4 7.5L11.6 27Z M20.2 16.4 27 27h-9.8Z' fill='%23111'/%3E%3C/svg%3E">
@@ -35,7 +35,7 @@
 
 <style>
 /* ============================================================
-   FONTS — self-hosted latin subsets (Google Fonts, OFL)
+   FONTS - self-hosted latin subsets (Google Fonts, OFL)
    ============================================================ */
 @font-face{font-family:'Inter Tight';font-style:normal;font-weight:100 900;font-display:swap;
   src:url(assets/fonts/inter-tight-latin.woff2) format('woff2')}
@@ -43,7 +43,7 @@
   src:url(assets/fonts/archivo-latin.woff2) format('woff2')}
 
 /* ============================================================
-   TUNING — hero photo framing. Tweak these in one place.
+   TUNING - hero photo framing. Tweak these in one place.
    The photo box keeps the photo's own aspect ratio, so the
    percentages below map straight onto the picture.
    ============================================================ */
@@ -51,7 +51,7 @@
   --hero-pos: 50% 0%;     /* object-position of the hero photo */
   --plate-x: 56.5%;       /* name plate: horizontal CENTRE, % of the photo box */
   --plate-y: 47%;         /* name plate: vertical CENTRE, % of the photo box */
-  --stack-x: 54%;         /* "React · Next.js · Three.js" row: horizontal centre */
+  --stack-x: 54%;         /* "Python · SQL · Web" row: horizontal centre */
   --stack-y: 82%;         /* stack row: vertical centre */
 }
 
@@ -77,14 +77,16 @@
   --av-s:4;               /* pixel avatar integer scale */
 }
 @media (max-width:1199px){:root{--u:min(calc(var(--vw) / 834), 1.2px)}}
-@media (max-width:760px){:root{--u:calc(var(--vw) / 390)}}
-@media (max-width:760px) and (min-width:420px){:root{--av-s:5}}
+@media (max-width:760px){:root{--u:calc(var(--vw) / 390);--av-s:3}}
+@media (max-width:760px) and (min-width:420px){:root{--av-s:4}}
 
 /* ============================================================
    BASE
    ============================================================ */
 *,*::before,*::after{box-sizing:border-box}
 html,body{overflow-x:clip}
+html{scrollbar-width:none}                 /* page still scrolls, the bar is just not drawn */
+html::-webkit-scrollbar{width:0;height:0;display:none}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
 body{margin:0;background:var(--black);color:var(--text);
   font-family:'Inter Tight',system-ui,-apple-system,'Segoe UI',sans-serif;font-weight:500;
@@ -144,7 +146,7 @@ html.i18n-out [data-i18n],html.i18n-out [data-i18n-html]{opacity:0}
 .btn-contact svg{display:none}
 
 /* ============================================================
-   HERO — desktop (1440 × 938u)
+   HERO - desktop (1440 × 938u)
    ============================================================ */
 .hero{position:relative;background:var(--paper);color:var(--ink);overflow:hidden}
 .hero-art{height:calc(938 * var(--u))}
@@ -152,11 +154,11 @@ html.i18n-out [data-i18n],html.i18n-out [data-i18n-html]{opacity:0}
 .hero-art > :not(.photo-frame){z-index:2}
 .clock-m{display:none}
 
-.title{left:calc(57 * var(--u));top:calc(246 * var(--u));font-family:'Archivo',sans-serif;font-stretch:104%;font-weight:640;
-  font-size:calc(90 * var(--u));line-height:.86;letter-spacing:-.06em;text-transform:uppercase}
+.title{left:calc(57 * var(--u));top:calc(262 * var(--u));font-family:'Archivo',sans-serif;font-stretch:104%;font-weight:640;
+  font-size:calc(68 * var(--u));line-height:.86;letter-spacing:-.06em;text-transform:uppercase}
 .tl{display:block;overflow:hidden;padding:0 .08em .05em 0;margin-bottom:-.05em}
 .tl > span{display:block}
-.title .yr{position:absolute;left:calc(282 * var(--u));top:calc(26 * var(--u));
+.title .yr{position:absolute;left:calc(388 * var(--u));top:calc(16 * var(--u));
   font-family:'Inter Tight',sans-serif;font-stretch:100%;font-weight:500;font-size:max(calc(16 * var(--u)),11px);letter-spacing:0;line-height:1}
 
 .about{left:calc(57 * var(--u));top:calc(458 * var(--u));width:calc(380 * var(--u))}
@@ -188,12 +190,6 @@ html.i18n-out [data-i18n],html.i18n-out [data-i18n-html]{opacity:0}
 .stack-row i{font-style:normal;opacity:.45}
 
 /* right column */
-.otw{right:calc(57 * var(--u));top:calc(258 * var(--u));display:inline-flex;align-items:center;gap:calc(10 * var(--u));
-  height:calc(40 * var(--u));padding:0 calc(16 * var(--u)) 0 calc(5 * var(--u));border-radius:999px;
-  background:rgba(255,255,255,.42);border:1px solid rgba(255,255,255,.55);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
-  font-size:max(calc(14 * var(--u)),11px);white-space:nowrap}
-.otw .chk{width:calc(30 * var(--u));height:calc(30 * var(--u));border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;flex:none}
-.otw .chk svg{width:48%;height:48%}
 .avail{right:calc(57 * var(--u));top:calc(442 * var(--u));text-align:right}
 .avail-t{font-size:calc(26 * var(--u));line-height:1.12;letter-spacing:-.02em;font-weight:500}
 .langs{margin-top:calc(10 * var(--u));font-size:max(calc(12 * var(--u)),11px);color:var(--grey-3);letter-spacing:.06em}
@@ -215,7 +211,7 @@ html.i18n-out [data-i18n],html.i18n-out [data-i18n-html]{opacity:0}
 .gh-bar{margin-top:calc(10 * var(--u));display:flex;align-items:center;justify-content:space-between;height:calc(28 * var(--u));
   padding:0 calc(10 * var(--u));background:#fff;color:#111;border-radius:calc(6 * var(--u));font-size:max(calc(12 * var(--u)),11px);transition:transform .25s var(--ease)}
 
-/* "Now building" card — isolated: future chat takes over [data-chat-trigger] */
+/* "Now building" card - isolated: future chat takes over [data-chat-trigger] */
 .card-now{position:relative;display:block;overflow:hidden;border-radius:calc(9 * var(--u));color:#fff;min-width:0;
   background:
     linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px) 0 0/4px 4px,
@@ -273,9 +269,10 @@ html.i18n-out [data-i18n],html.i18n-out [data-i18n-html]{opacity:0}
    BAR + STATEMENT
    ============================================================ */
 .bar{background:#000;border-bottom:1px solid var(--line);color:var(--text)}
-.bar-in{height:calc(111 * var(--u));display:flex;align-items:center;justify-content:space-between;padding:0 calc(57 * var(--u));
+.bar-in{height:calc(111 * var(--u));display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 calc(57 * var(--u));
   font-family:'Archivo',sans-serif;font-stretch:125%;font-weight:600;font-size:max(calc(14 * var(--u)),11px);letter-spacing:.06em}
 .bar-in .muted{color:var(--grey-2)}
+.bar-loc{justify-self:end}
 .bar-mid{display:flex;align-items:center;gap:calc(16 * var(--u))}
 .round{display:grid;place-items:center;width:calc(44 * var(--u));height:calc(44 * var(--u));border-radius:50%;background:#fff;color:#000;flex:none;transition:transform .3s var(--ease)}
 .round svg{width:40%;height:40%}
@@ -292,36 +289,31 @@ html.i18n-out [data-i18n],html.i18n-out [data-i18n-html]{opacity:0}
    ============================================================ */
 .work{background:#000;padding-bottom:calc(150 * var(--u))}
 .panel{position:relative;width:calc(1302 * var(--u));height:calc(429 * var(--u));margin:0 auto;border:1px solid var(--line-2);
-  border-radius:calc(14 * var(--u));overflow:hidden;display:flex;align-items:center;padding:0 0 0 calc(51 * var(--u))}
-.p-left{width:calc(470 * var(--u));flex:none;align-self:stretch;display:flex;flex-direction:column;justify-content:center}
+  border-radius:calc(14 * var(--u));overflow:hidden;display:flex;align-items:center;padding:0 calc(51 * var(--u))}
+.p-left{width:calc(380 * var(--u));flex:none;align-self:stretch;display:flex;flex-direction:column;justify-content:center}
 .p-h{font-size:calc(55 * var(--u));line-height:1.02;letter-spacing:-.035em;font-weight:500}
 .p-h > span{display:block;position:relative;width:max-content}
-.tile{position:absolute;display:grid;place-items:center;width:calc(88 * var(--u));height:calc(88 * var(--u));border-radius:calc(12 * var(--u));
-  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);pointer-events:none}
-.tile svg{width:38%;height:38%;color:#fff}
-.tile-ast{left:calc(100% + 18 * var(--u));top:calc(-24 * var(--u))}
-.tile-dots{left:calc(100% - 26 * var(--u));top:calc(-22 * var(--u))}
-.p-p{margin-top:calc(26 * var(--u));max-width:calc(400 * var(--u));font-size:max(calc(14.5 * var(--u)),11px);line-height:1.5;color:#c9c9c9}
+.p-p{margin-top:calc(26 * var(--u));max-width:calc(368 * var(--u));font-size:max(calc(14.5 * var(--u)),11px);line-height:1.5;color:#c9c9c9}
 
-.p-cards{display:flex;gap:calc(12 * var(--u));margin-left:auto;margin-right:calc(-62 * var(--u))}
+.p-cards{display:flex;gap:calc(12 * var(--u));margin-left:auto}
 .pc{position:relative;flex:none;height:calc(326 * var(--u));border-radius:calc(8 * var(--u));overflow:hidden;transition:transform .45s var(--ease)}
-.pc-stack{width:calc(293 * var(--u));background:#d6d6d6;color:#111;padding:calc(22 * var(--u));display:flex;flex-direction:column}
+.pc-stack{width:calc(272 * var(--u));background:#d6d6d6;color:#111;padding:calc(22 * var(--u));display:flex;flex-direction:column}
 .discs{display:grid;grid-template-columns:repeat(4,calc(48 * var(--u)));justify-content:space-between;row-gap:calc(14 * var(--u))}
 .disc{width:calc(48 * var(--u));height:calc(48 * var(--u));border-radius:50%;background:#111;color:#fff;display:grid;place-items:center;
   font-size:max(calc(12 * var(--u)),11px);font-weight:600;letter-spacing:-.01em}
 .pc .big{margin-top:auto;font-size:calc(43 * var(--u))}
 .pc .lbl2{margin-top:calc(6 * var(--u));font-size:max(calc(13 * var(--u)),11px)}
-.pc-cred{width:calc(298 * var(--u));background:#262626;color:#fff;padding:calc(22 * var(--u));display:flex;flex-direction:column}
+.pc-cred{width:calc(278 * var(--u));background:#262626;color:#fff;padding:calc(22 * var(--u));display:flex;flex-direction:column}
 .pc-cred .row{display:flex;justify-content:space-between;align-items:flex-start}
 .pc-cred .big{margin-top:0}
 .pc-cred .lbl2{color:#cfcfcf}
-.badge{position:relative;display:block;width:calc(150 * var(--u));margin:calc(12 * var(--u)) auto 0;color:#e9e9e9}
+.badge{display:block;width:calc(172 * var(--u));margin:calc(8 * var(--u)) auto 0;color:#e9e9e9}
 .laurel{width:100%;height:auto}
-.badge-t{position:absolute;left:0;right:0;top:30%;text-align:center;font-family:'Archivo',sans-serif;font-weight:700;font-size:max(calc(10 * var(--u)),11px);line-height:1.1;letter-spacing:.04em}
-.badge-t small{display:block;margin-top:.4em;font:600 max(calc(10 * var(--u)),11px)/1 'Inter Tight',sans-serif;letter-spacing:.06em;color:#bdbdbd}
+.laurel text{font-family:'Archivo',sans-serif;font-weight:700;font-size:6.6px;letter-spacing:.05em;text-anchor:middle;fill:currentColor}
+.laurel .yr2{font-family:'Inter Tight',sans-serif;font-weight:600;font-size:5.6px;letter-spacing:.08em;fill:#bdbdbd}
 .cred-note{margin-top:auto;font-size:max(calc(12 * var(--u)),11px);line-height:1.45;color:#bdbdbd}
 .pc-cred .arr{font-size:max(calc(14 * var(--u)),11px)}
-.pc-mh{width:calc(200 * var(--u));background:#1c1c1c}
+.pc-mh{width:calc(196 * var(--u));background:#1c1c1c}
 .mh-cap{position:absolute;left:0;right:0;bottom:0;padding:calc(30 * var(--u)) calc(12 * var(--u)) calc(12 * var(--u));
   background:linear-gradient(to top,rgba(0,0,0,.75),transparent);font-size:max(calc(11 * var(--u)),11px);line-height:1.3;color:#fff}
 .mh-play{display:none}
@@ -337,7 +329,7 @@ html.i18n-out [data-i18n],html.i18n-out [data-i18n-html]{opacity:0}
 .foot-links a{display:inline-flex;align-items:center;text-underline-offset:4px}
 
 /* ============================================================
-   HOVER — fine pointers only
+   HOVER - fine pointers only
    ============================================================ */
 @media (hover:hover) and (pointer:fine){
   .btn:hover,.gh-bar:hover{transform:translateY(-1px)}
@@ -370,15 +362,15 @@ html.i18n-out [data-i18n],html.i18n-out [data-i18n-html]{opacity:0}
 }
 
 /* ============================================================
-   TABLET (761–1199) — 834u artboard
+   TABLET (761–1199) - 834u artboard
    ============================================================ */
 @media (max-width:1199px){
   .top-in{padding:calc(36 * var(--u)) calc(40 * var(--u)) 0}
   .top-r{gap:calc(20 * var(--u))}
   .clock{text-align:right}
   .hero-art{height:calc(990 * var(--u))}
-  .title{left:calc(40 * var(--u));top:calc(150 * var(--u));font-size:calc(84 * var(--u))}
-  .title .yr{left:calc(212 * var(--u));top:calc(10 * var(--u))}
+  .title{left:calc(40 * var(--u));top:calc(190 * var(--u));font-size:calc(56 * var(--u))}
+  .title .yr{left:calc(320 * var(--u));top:calc(8 * var(--u))}
   .about{left:calc(40 * var(--u));top:calc(380 * var(--u));width:calc(300 * var(--u))}
   .about .copy{margin-top:calc(12 * var(--u))}
   .btn-cv{top:calc(100 * var(--u))}
@@ -391,8 +383,6 @@ html.i18n-out [data-i18n],html.i18n-out [data-i18n-html]{opacity:0}
   .plate-name{font-size:max(calc(15 * var(--u)),11px)}
   .plate-menu{width:calc(16 * var(--u));gap:calc(4 * var(--u))}
   .stack-row{font-size:max(calc(13 * var(--u)),11px);gap:calc(10 * var(--u))}
-  .otw{right:auto;left:calc(420 * var(--u));top:calc(730 * var(--u));height:calc(36 * var(--u))}
-  .otw .chk{width:calc(26 * var(--u));height:calc(26 * var(--u))}
   .avail{right:calc(40 * var(--u));top:calc(730 * var(--u));height:calc(36 * var(--u));display:flex;align-items:center}
   .avail-t{font-size:max(calc(15 * var(--u)),11px)}
   .avail-t br{display:none}
@@ -413,25 +403,22 @@ html.i18n-out [data-i18n],html.i18n-out [data-i18n-html]{opacity:0}
   .st{width:calc(680 * var(--u));font-size:calc(40 * var(--u))}
   .sub{margin-top:calc(110 * var(--u));font-size:calc(19 * var(--u))}
   .panel{width:calc(754 * var(--u));height:auto;display:block;padding:calc(32 * var(--u))}
-  .p-left{width:auto;display:grid;grid-template-columns:auto 1fr;align-items:end;column-gap:calc(60 * var(--u))}
+  .p-left{width:auto;display:block}
   .p-h{font-size:calc(48 * var(--u))}
-  .tile{width:calc(72 * var(--u));height:calc(72 * var(--u))}
-  .tile-ast{left:calc(100% + 14 * var(--u));top:calc(-20 * var(--u))}
-  .tile-dots{left:calc(100% - 22 * var(--u));top:calc(-18 * var(--u))}
-  .p-p{margin:0;max-width:none;padding-bottom:calc(4 * var(--u))}
-  .p-cards{margin:calc(36 * var(--u)) calc(-86 * var(--u)) 0 0}
+  .p-p{margin-top:calc(22 * var(--u));max-width:calc(520 * var(--u))}
+  .p-cards{margin:calc(36 * var(--u)) 0 0}
   .pc{height:calc(300 * var(--u))}
-  .pc-stack,.pc-cred{width:calc(250 * var(--u));padding:calc(18 * var(--u))}
+  .pc-stack,.pc-cred{width:calc(233 * var(--u));padding:calc(18 * var(--u))}
   .discs{grid-template-columns:repeat(4,calc(44 * var(--u)))}
   .disc{width:calc(44 * var(--u));height:calc(44 * var(--u))}
-  .badge{width:calc(136 * var(--u))}
-  .pc-mh{width:calc(220 * var(--u))}
+  .badge{width:calc(156 * var(--u))}
+  .pc-mh{width:calc(200 * var(--u))}
   .foot-in{height:calc(80 * var(--u));padding:0 calc(40 * var(--u))}
 }
 @media (max-width:899px) and (min-width:761px){.top .clock{display:none}}
 
 /* ============================================================
-   PHONE (≤ 760) — 390u artboard, one column
+   PHONE (≤ 760) - 390u artboard, one column
    ============================================================ */
 @media (max-width:760px){
   .top{position:absolute}
@@ -451,8 +438,8 @@ html.i18n-out [data-i18n],html.i18n-out [data-i18n-html]{opacity:0}
   .hero-art{height:auto;padding:calc(88 * var(--u)) calc(20 * var(--u)) calc(44 * var(--u))}
   .hero-art > *{position:relative;left:auto;right:auto;top:auto}
   .clock-m{display:block;font-size:max(calc(12 * var(--u)),11px);color:var(--grey-3);font-variant-numeric:tabular-nums;margin-top:calc(14 * var(--u))}
-  .title{margin-top:calc(10 * var(--u));font-size:calc(64 * var(--u))}
-  .title .yr{left:calc(162 * var(--u));top:calc(8 * var(--u))}
+  .title{margin-top:calc(10 * var(--u));font-size:calc(54 * var(--u))}
+  .title .yr{left:calc(308 * var(--u));top:calc(6 * var(--u))}
   .about{width:auto;margin-top:calc(26 * var(--u))}
   .about .copy{font-size:max(calc(15 * var(--u)),11px);margin-top:calc(10 * var(--u))}
   .btn-cv{position:relative;top:auto;margin-top:calc(18 * var(--u));height:max(calc(44 * var(--u)),44px)}
@@ -464,9 +451,7 @@ html.i18n-out [data-i18n],html.i18n-out [data-i18n-html]{opacity:0}
   .plate-name{font-size:max(calc(15 * var(--u)),11px)}
   .plate-menu{width:calc(15 * var(--u));gap:calc(4 * var(--u))}
   .stack-row{--stack-y:59%;font-size:max(calc(13 * var(--u)),11px);gap:calc(8 * var(--u))}
-  .otw{display:inline-flex;margin-top:calc(-6 * var(--u));height:max(calc(36 * var(--u)),36px);font-size:max(calc(13 * var(--u)),11px)}
-  .otw .chk{width:calc(26 * var(--u));height:calc(26 * var(--u))}
-  .avail{display:inline-block;margin-left:calc(10 * var(--u));vertical-align:middle;text-align:left;margin-top:calc(-6 * var(--u))}
+  .avail{text-align:left;margin-top:calc(-6 * var(--u))}
   .avail-t{font-size:max(calc(14 * var(--u)),11px);line-height:1.2}
   .langs{display:none}
   .stats{width:auto;height:calc(232 * var(--u));margin-top:calc(20 * var(--u))}
@@ -486,20 +471,18 @@ html.i18n-out [data-i18n],html.i18n-out [data-i18n-html]{opacity:0}
   .panel{width:calc(350 * var(--u));padding:calc(20 * var(--u)) 0 calc(14 * var(--u))}
   .p-left{display:block;padding:0 calc(20 * var(--u))}
   .p-h{font-size:calc(40 * var(--u))}
-  .tile{width:calc(64 * var(--u));height:calc(64 * var(--u))}
-  .tile-ast{top:calc(-12 * var(--u));left:calc(100% + 12 * var(--u))}
-  .tile-dots{display:none}
   .p-p{margin-top:calc(18 * var(--u))}
   .p-cards{margin:calc(24 * var(--u)) 0 0;padding:0 calc(20 * var(--u));overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 calc(20 * var(--u));
     scrollbar-width:none;overscroll-behavior-x:contain}
   .p-cards::-webkit-scrollbar{display:none}
   .p-cards::after{content:"";flex:none;width:calc(8 * var(--u))}
   .pc,.pc-stack,.pc-cred,.pc-mh{width:calc(260 * var(--u));height:calc(320 * var(--u));scroll-snap-align:start}
+  .pc-mh{width:calc(192 * var(--u))}        /* 3:5 like the video, so nothing is cropped */
   .discs{grid-template-columns:repeat(4,calc(48 * var(--u)))}
   .disc{width:calc(48 * var(--u));height:calc(48 * var(--u))}
   .p-dots{display:flex;margin-top:calc(8 * var(--u))}
   .foot-in{height:auto;flex-direction:column-reverse;gap:calc(14 * var(--u));padding:calc(28 * var(--u)) calc(20 * var(--u)) calc(28 * var(--u) + env(safe-area-inset-bottom));text-align:center}
-  .foot-links{gap:calc(18 * var(--u))}
+  .foot-links{gap:0 calc(18 * var(--u));flex-wrap:wrap;justify-content:center}
   .foot-links a{min-height:44px}
 }
 
@@ -532,7 +515,7 @@ html.i18n-out [data-i18n],html.i18n-out [data-i18n-html]{opacity:0}
         <button type="button" data-lang="es" aria-pressed="true" lang="es" aria-label="Español">ES</button>
         <button type="button" data-lang="en" aria-pressed="false" lang="en" aria-label="English">EN</button>
       </div>
-      <p class="clock"><span data-i18n="clock.city">Lima, Perú</span><span class="clock-t">—:— (UTC−5)</span></p>
+      <p class="clock"><span data-i18n="clock.city">Lima, Perú</span><span class="clock-t">--:-- (UTC−5)</span></p>
       <a class="btn btn-contact" href="mailto:cornejoadrian02@gmail.com">
         <span class="t" data-i18n="cta.contact">Contacto ↗</span>
         <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
@@ -545,17 +528,17 @@ html.i18n-out [data-i18n],html.i18n-out [data-i18n-html]{opacity:0}
 <!-- ================= HERO ================= -->
 <section class="hero" id="top" aria-labelledby="h1">
   <div class="art hero-art">
-    <h1 class="sr" id="h1" data-i18n="h1">Adrian Cornejo — Desarrollador Full-Stack</h1>
-    <p class="clock-m" aria-hidden="true">Lima, PE · <span class="clock-tm">—:—</span></p>
+    <h1 class="sr" id="h1" data-i18n="h1">Adrian Cornejo - Desarrollador de Software</h1>
+    <p class="clock-m" aria-hidden="true">Lima, PE · <span class="clock-tm">--:--</span></p>
 
     <div class="title" aria-hidden="true">
-      <span class="tl"><span>Full</span></span><sup class="yr">(’26)</sup>
-      <span class="tl"><span>Stack</span></span>
+      <span class="tl"><span>Software</span></span><sup class="yr">(’26)</sup>
+      <span class="tl"><span>Developer</span></span>
     </div>
 
     <div class="about" data-rise>
       <p class="label" data-i18n="about.label">● (SOBRE MÍ)</p>
-      <p class="copy" data-i18n-html="about.copy">Desarrollador de software que crea apps web full-stack, <br>experiencias 3D y herramientas con IA.</p>
+      <p class="copy" data-i18n-html="about.copy">Desarrollador de software que crea apps web, <br>herramientas con IA y experiencias interactivas.</p>
       <a class="btn btn-cv" href="assets/cv/Adrian_Cornejo_CV_ES.pdf" download data-i18n="cv">Descargar CV ↗</a>
     </div>
 
@@ -568,11 +551,10 @@ html.i18n-out [data-i18n],html.i18n-out [data-i18n-html]{opacity:0}
           <span class="plate-name">ADRIAN CORNEJO</span>
           <span class="plate-menu"><i></i><i></i></span>
         </div>
-        <p class="stack-row" aria-label="React, Next.js, Three.js"><span>React</span><i>·</i><span>Next.js</span><i>·</i><span>Three.js</span></p>
+        <p class="stack-row" aria-label="Python, SQL, Web"><span>Python</span><i>·</i><span>SQL</span><i>·</i><span>Web</span></p>
       </div>
     </div>
 
-    <p class="otw" data-rise><span class="chk" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 6.3 4.8 9 10 3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span><span data-i18n="otw">Disponible</span></p>
     <div class="avail" data-rise>
       <p class="avail-t" data-i18n-html="avail">Disponible para<br><span class="pulse" aria-hidden="true"></span>roles remotos</p>
       <p class="langs">ES · EN · FR</p>
@@ -596,7 +578,7 @@ html.i18n-out [data-i18n],html.i18n-out [data-i18n-html]{opacity:0}
 
       <!-- Now building: Pixel Me. Isolated so the future chat can take over the click via [data-chat-trigger]. -->
       <a class="card-now" data-chat-trigger href="https://github.com/Adrian52507/portafolio" target="_blank" rel="noopener"
-         aria-label="Pixel Me, chat en construcción — ver el repositorio en GitHub" data-i18n-aria="now.aria">
+         aria-label="Pixel Me, chat en construcción - ver el repositorio en GitHub" data-i18n-aria="now.aria">
         <span class="now-top"><i class="pulse" aria-hidden="true"></i><span data-i18n="now.label">En construcción</span></span>
         <span class="now-arrow" aria-hidden="true">↗</span>
         <img class="av-img" src="assets/img/avatar/idle-front-1.png" width="32" height="30" loading="lazy" decoding="async"
@@ -614,13 +596,13 @@ html.i18n-out [data-i18n],html.i18n-out [data-i18n-html]{opacity:0}
       <div class="f-card">
         <div class="f-slide is-active" role="group" aria-roledescription="slide" aria-label="1 / 2">
           <video muted playsinline loop preload="metadata" poster="assets/video/fingidazo-poster.webp" width="1280" height="800"
-                 aria-label="El Fingidazo — demo" disablepictureinpicture>
+                 aria-label="El Fingidazo - demo" disablepictureinpicture>
             <source src="assets/video/fingidazo.mp4" type="video/mp4">
           </video>
         </div>
         <div class="f-slide" role="group" aria-roledescription="slide" aria-label="2 / 2">
           <video muted playsinline loop preload="none" poster="assets/video/mentor-poster.webp" width="1280" height="800"
-                 aria-label="Mentor — demo" disablepictureinpicture>
+                 aria-label="Mentor - demo" disablepictureinpicture>
             <source src="assets/video/mentor.mp4" type="video/mp4">
           </video>
         </div>
@@ -647,30 +629,30 @@ html.i18n-out [data-i18n],html.i18n-out [data-i18n-html]{opacity:0}
 <!-- ================= BAR ================= -->
 <div class="bar dark">
   <div class="art bar-in">
-    <span>LIMA, <span class="muted">PE</span></span>
+    <span aria-hidden="true"></span>
     <span class="bar-mid">
       <span class="bar-t" data-i18n="bar.scroll">DESLIZA</span>
       <a class="round" href="#about" aria-label="Ir a Sobre mí" data-i18n-aria="bar.aria">
         <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v11M3.5 8.5 8 13l4.5-4.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
       </a>
     </span>
-    <span class="muted" data-i18n="bar.remote">ABIERTO A REMOTO</span>
+    <span class="bar-loc">LIMA, <span class="muted">PE</span></span>
   </div>
 </div>
 
 <!-- ================= STATEMENT ================= -->
 <section class="statement dark" id="about" aria-labelledby="st-h">
   <h2 class="sr" id="st-h" data-i18n="nav.about">Sobre mí</h2>
-  <p class="st" id="st">Creo que el buen software es más que código que funciona. Es una experiencia que la gente recuerda. Cada proyecto que construyo está diseñado para resolver problemas reales, sentirse natural y crecer con quienes lo usan.</p>
-  <p class="sub" data-i18n-html="sub">Desarrollo full-stack, de la<br>idea al despliegue. <span class="g2">Hecho para lanzarse, hecho para durar.</span></p>
+  <p class="st" id="st">Creo que el buen software es más que código que funciona. Es una experiencia que la gente recuerda. Cada proyecto que construyo está diseñado para resolver problemáticas específicas y, al mismo tiempo, sentirse natural y crecer con quienes lo usan.</p>
+  <p class="sub" data-i18n-html="sub">Desarrollo web, programación,<br>análisis de datos. <span class="g2">Hecho para desplegarse, hecho para durar.</span></p>
 </section>
 
 <!-- ================= WORK & SKILLS ================= -->
 <section class="work dark" id="work" aria-labelledby="p-h">
   <div class="panel">
     <div class="p-left">
-      <h2 class="p-h" id="p-h"><span>Convierto<span class="tile tile-ast" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2v20M3.3 7l17.4 10M3.3 17 20.7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span></span><span>Ideas en</span><span>Productos<span class="tile tile-dots" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="18" r="3"/></svg></span></span><span>Reales</span></h2>
-      <p class="p-p" data-i18n="panel.p">Apps web, juegos multijugador, agentes de IA y flujos de datos — diseñados, construidos y desplegados de punta a punta, y usados por personas reales.</p>
+      <h2 class="p-h" id="p-h"><span>Convierto</span><span>Ideas en</span><span>Productos</span><span>Reales</span></h2>
+      <p class="p-p" data-i18n="panel.p">Apps web, juegos multijugador, agentes de IA y flujos de datos - diseñados, construidos y desplegados de punta a punta, y usados por personas reales.</p>
     </div>
 
     <div class="p-cards" id="p-cards">
@@ -689,8 +671,8 @@ html.i18n-out [data-i18n],html.i18n-out [data-i18n-html]{opacity:0}
         <p class="lbl2" data-i18n="stack.label">Herramientas y tecnologías</p>
       </article>
 
-      <a class="pc pc-cred" href="https://linkedin.com/in/adrian-cornejo-palacios" target="_blank" rel="noopener">
-        <span class="row"><span><span class="big"><span class="count" data-to="4">4</span></span><span class="lbl2" style="display:block" data-i18n="cred.label">Certificaciones</span></span><span class="arr" aria-hidden="true">↗</span></span>
+      <a class="pc pc-cred" href="https://www.linkedin.com/in/adrian-cornejo-palacios/details/certifications/" target="_blank" rel="noopener">
+        <span class="row"><span><span class="big"><span class="count" data-to="11">11</span></span><span class="lbl2" style="display:block" data-i18n="cred.label">Certificaciones</span></span><span class="arr" aria-hidden="true">↗</span></span>
         <span class="badge" role="img" aria-label="Seeds for the Future · 2022">
         <svg class="laurel" viewBox="0 0 120 84" aria-hidden="true">
           <defs><ellipse id="lf" cx="60" cy="9" rx="3" ry="7.5" transform="rotate(32 60 9)"/></defs>
@@ -698,10 +680,12 @@ html.i18n-out [data-i18n],html.i18n-out [data-i18n-html]{opacity:0}
             <g><use href="#lf" transform="rotate(-150 60 46)"/><use href="#lf" transform="rotate(-128 60 46)"/><use href="#lf" transform="rotate(-106 60 46)"/><use href="#lf" transform="rotate(-84 60 46)"/><use href="#lf" transform="rotate(-62 60 46)"/><use href="#lf" transform="rotate(-40 60 46)"/></g>
             <g transform="translate(120 0) scale(-1 1)"><use href="#lf" transform="rotate(-150 60 46)"/><use href="#lf" transform="rotate(-128 60 46)"/><use href="#lf" transform="rotate(-106 60 46)"/><use href="#lf" transform="rotate(-84 60 46)"/><use href="#lf" transform="rotate(-62 60 46)"/><use href="#lf" transform="rotate(-40 60 46)"/></g>
           </g>
+          <text x="60" y="40.5">SEEDS FOR</text>
+          <text x="60" y="48.5">THE FUTURE</text>
+          <text class="yr2" x="60" y="58">· 2022 ·</text>
         </svg>
-        <span class="badge-t" aria-hidden="true">SEEDS FOR<br>THE FUTURE<small>· 2022 ·</small></span>
         </span>
-        <p class="cred-note">Huawei Seeds for the Future · HackerRank:<br>Problem Solving, SQL, REST API (Python).</p>
+        <p class="cred-note">Huawei Seeds for the Future · HackerRank<br>Software Engineer · Anthropic · Platzi.</p>
       </a>
 
       <article class="pc pc-mh mh">
@@ -709,7 +693,7 @@ html.i18n-out [data-i18n],html.i18n-out [data-i18n-html]{opacity:0}
                aria-label="MetaHuman de Adrian" data-i18n-aria="mh.alt" disablepictureinpicture>
           <source src="assets/video/metahuman.mp4" type="video/mp4">
         </video>
-        <p class="mh-cap" data-i18n="mh.caption">MetaHuman · creado desde mi propio escaneo 3D</p>
+        <p class="mh-cap" data-i18n="mh.caption">MetaHuman · creado con Blender y UE desde mi propio escaneo 3D</p>
       </article>
     </div>
     <div class="p-dots" aria-hidden="true"><button type="button" tabindex="-1" aria-current="true"></button><button type="button" tabindex="-1"></button><button type="button" tabindex="-1"></button></div>
@@ -720,41 +704,41 @@ html.i18n-out [data-i18n],html.i18n-out [data-i18n-html]{opacity:0}
 <!-- ================= FOOTER ================= -->
 <footer class="foot dark" id="contact">
   <div class="art foot-in">
-    <small>© 2026 Adrian Cornejo Palacios</small>
+    <small>© <span class="year">2026</span> Adrian Cornejo Palacios</small>
     <nav class="foot-links" aria-label="Contacto" data-i18n-aria="nav.contact">
       <a href="mailto:cornejoadrian02@gmail.com" data-i18n="foot.email">Correo ↗</a>
       <a href="https://github.com/Adrian52507" target="_blank" rel="noopener">GitHub ↗</a>
       <a href="https://linkedin.com/in/adrian-cornejo-palacios" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="https://www.instagram.com/adrianj_cp/" target="_blank" rel="noopener">Instagram ↗</a>
     </nav>
   </div>
 </footer>
 
 <script>
 /* ==================================================================
-   COPY — every visible string, both languages. Edit wording here.
+   COPY - every visible string, both languages. Edit wording here.
    ================================================================== */
 const STRINGS = {
   es: {
-    'meta.title': 'Adrian Cornejo — Desarrollador Full-Stack',
-    'meta.desc': 'Desarrollador full-stack en Lima, Perú. Apps web, experiencias 3D/interactivas y automatización con IA. Disponible para roles remotos.',
+    'meta.title': 'Adrian Cornejo - Desarrollador de Software',
+    'meta.desc': 'Desarrollador de software en Lima, Perú. Apps web, experiencias 3D/interactivas y automatización con IA. Disponible para roles remotos.',
     'skip': 'Saltar al contenido',
-    'h1': 'Adrian Cornejo — Desarrollador Full-Stack',
+    'h1': 'Adrian Cornejo - Desarrollador de Software',
     'nav.aria': 'Principal',
     'nav.home': 'Inicio', 'nav.about': 'Sobre mí', 'nav.work': 'Proyectos', 'nav.contact': 'Contacto',
     'cta.contact': 'Contacto ↗',
     'clock.city': 'Lima, Perú',
     'about.label': '● (SOBRE MÍ)',
-    'about.copy': 'Desarrollador de software que crea apps web full-stack, <br>experiencias 3D y herramientas con IA.',
+    'about.copy': 'Desarrollador de software que crea apps web, <br>herramientas con IA y experiencias interactivas.',
     'cv': 'Descargar CV ↗',
     'cv.file': 'assets/cv/Adrian_Cornejo_CV_ES.pdf',
     'hero.alt': 'Adrian Cornejo de espaldas, en blanco y negro, con una camisa negra',
-    'otw': 'Disponible',
     'avail': 'Disponible para<br><span class="pulse" aria-hidden="true"></span>roles remotos',
     'stats.projects': 'Proyectos lanzados',
     'now.label': 'En construcción',
     'now.last': 'Último commit',
     'now.repo': 'Ver repo ↗',
-    'now.aria': 'Pixel Me, chat en construcción — ver el repositorio en GitHub',
+    'now.aria': 'Pixel Me, chat en construcción - ver el repositorio en GitHub',
     'now.alt': 'Avatar pixel art de Adrian',
     'feat.aria': 'Proyectos destacados',
     'feat.label': 'Destacado',
@@ -765,40 +749,37 @@ const STRINGS = {
     'feat.next': 'Siguiente proyecto',
     'feat.dot1': 'Proyecto 1', 'feat.dot2': 'Proyecto 2',
     'bar.scroll': 'DESLIZA',
-    'bar.remote': 'ABIERTO A REMOTO',
     'bar.aria': 'Ir a Sobre mí',
-    'statement': ['Creo que el buen software es más que código que funciona. Es una experiencia que la gente recuerda. Cada proyecto que construyo está diseñado para resolver problemas reales, sentirse natural y crecer con quienes lo usan.'],
-    'sub': 'Desarrollo full-stack, de la<br>idea al despliegue. <span class="g2">Hecho para lanzarse, hecho para durar.</span>',
+    'statement': ['Creo que el buen software es más que código que funciona. Es una experiencia que la gente recuerda. Cada proyecto que construyo está diseñado para resolver problemáticas específicas y, al mismo tiempo, sentirse natural y crecer con quienes lo usan.'],
+    'sub': 'Desarrollo web, programación,<br>análisis de datos. <span class="g2">Hecho para desplegarse, hecho para durar.</span>',
     'panel.h': ['Convierto', 'Ideas en', 'Productos', 'Reales'],
-    'panel.dotsLine': 2,           // line that carries the four-dot tile ("Productos")
-    'panel.p': 'Apps web, juegos multijugador, agentes de IA y flujos de datos — diseñados, construidos y desplegados de punta a punta, y usados por personas reales.',
+    'panel.p': 'Apps web, juegos multijugador, agentes de IA y flujos de datos - diseñados, construidos y desplegados de punta a punta, y usados por personas reales.',
     'stack.label': 'Herramientas y tecnologías',
     'cred.label': 'Certificaciones',
-    'mh.caption': 'MetaHuman · creado desde mi propio escaneo 3D',
+    'mh.caption': 'MetaHuman · creado con Blender y UE desde mi propio escaneo 3D',
     'mh.alt': 'MetaHuman de Adrian',
     'foot.email': 'Correo ↗'
   },
   en: {
-    'meta.title': 'Adrian Cornejo — Full-Stack Developer',
-    'meta.desc': 'Full-stack developer in Lima, Peru. Web apps, 3D/interactive experiences and AI automation. Open to remote roles.',
+    'meta.title': 'Adrian Cornejo - Software Developer',
+    'meta.desc': 'Software developer in Lima, Peru. Web apps, 3D/interactive experiences and AI automation. Open to remote roles.',
     'skip': 'Skip to content',
-    'h1': 'Adrian Cornejo — Full-Stack Developer',
+    'h1': 'Adrian Cornejo - Software Developer',
     'nav.aria': 'Main',
     'nav.home': 'Home', 'nav.about': 'About', 'nav.work': 'Work', 'nav.contact': 'Contact',
     'cta.contact': 'Contact ↗',
     'clock.city': 'Lima, Peru',
     'about.label': '● (ABOUT)',
-    'about.copy': 'Software developer building full-stack web apps, <br>3D experiences and AI-powered tools.',
+    'about.copy': 'Software developer building web apps, <br>AI-powered tools and interactive experiences.',
     'cv': 'Download CV ↗',
     'cv.file': 'assets/cv/Adrian_Cornejo_CV_EN.pdf',
     'hero.alt': 'Adrian Cornejo seen from behind, in black and white, wearing a black shirt',
-    'otw': 'Open to work',
     'avail': 'Available for<br><span class="pulse" aria-hidden="true"></span>remote roles',
     'stats.projects': 'Projects shipped',
     'now.label': 'Now building',
     'now.last': 'Last commit',
     'now.repo': 'View repo ↗',
-    'now.aria': 'Pixel Me, chat in progress — view the repository on GitHub',
+    'now.aria': 'Pixel Me, chat in progress - view the repository on GitHub',
     'now.alt': 'Pixel-art avatar of Adrian',
     'feat.aria': 'Featured projects',
     'feat.label': 'Featured',
@@ -809,16 +790,14 @@ const STRINGS = {
     'feat.next': 'Next project',
     'feat.dot1': 'Project 1', 'feat.dot2': 'Project 2',
     'bar.scroll': 'SCROLL DOWN',
-    'bar.remote': 'OPEN TO REMOTE',
     'bar.aria': 'Go to About',
-    'statement': ['I believe great software is more than', 'code that works. It’s an experience', 'people remember. Every project I build is', 'designed to solve real problems, feel', 'effortless, and grow with its users.'],
-    'sub': 'Full-stack development, from<br>idea to deployment. <span class="g2">Built to ship, built to last.</span>',
+    'statement': ['I believe great software is more than', 'code that works. It’s an experience', 'people remember. Every project I', 'build is designed to solve specific', 'problems, feel effortless, and grow', 'with its users.'],
+    'sub': 'Web development, programming,<br>data analysis. <span class="g2">Built to deploy, built to last.</span>',
     'panel.h': ['Turning', 'Ideas Into', 'Working', 'Products'],
-    'panel.dotsLine': 3,           // "Products"
-    'panel.p': 'Web apps, multiplayer games, AI agents and data pipelines — designed, built and deployed end to end, and used by real people.',
+    'panel.p': 'Web apps, multiplayer games, AI agents and data pipelines - designed, built and deployed end to end, and used by real people.',
     'stack.label': 'Tools & technologies',
     'cred.label': 'Certifications',
-    'mh.caption': 'MetaHuman · built from my own 3D scan',
+    'mh.caption': 'MetaHuman · built with Blender and UE from my own 3D scan',
     'mh.alt': 'Adrian’s MetaHuman',
     'foot.email': 'Email ↗'
   }
@@ -827,7 +806,7 @@ const STRINGS = {
 const REPO = 'Adrian52507/portafolio';
 const FEATURED = [
   { name: 'El Fingidazo', stack: '[Next.js · R3F]', href: 'https://el-fingidazo.vercel.app/' },
-  { name: 'Mentor',       stack: '[AI agent · RAG]', href: null }   // internal tool, no public link
+  { name: 'Mentor',       stack: '[Bot · AI MCP]', href: null }   // internal tool, no public link
 ];
 
 (() => {
@@ -894,12 +873,9 @@ function setLang(next) {
 }
 $$('.lang button').forEach(b => b.addEventListener('click', () => setLang(b.dataset.lang)));
 
-/* panel heading: lines + the two glass tiles */
-const TILE_AST = $('.tile-ast').outerHTML, TILE_DOTS = $('.tile-dots').outerHTML;
+/* panel heading: one span per line */
 function buildHeading() {
-  const lines = t('panel.h'), dl = t('panel.dotsLine');
-  $('#p-h').innerHTML = lines.map((l, i) =>
-    `<span>${l}${i === 0 ? TILE_AST : ''}${i === dl ? TILE_DOTS : ''}</span>`).join('');
+  $('#p-h').innerHTML = t('panel.h').map(l => `<span>${l}</span>`).join('');
 }
 
 /* ---------- statement: one span per word ---------- */
@@ -1157,7 +1133,7 @@ function initFeatured() {
   meta();
 }
 
-/* ---------- "Now building" card (Pixel Me) — future chat entry point ---------- */
+/* ---------- "Now building" card (Pixel Me) - future chat entry point ---------- */
 let commitDate = null, commitState = 'pending';
 function renderCommit() {
   const el = $('.card-now .now-sub');
@@ -1235,6 +1211,11 @@ function initNowBuilding() {
     })
     .finally(renderCommit);
 }
+
+/* ---------- current year: "(’26)" in the hero and the footer © ---------- */
+const YEAR = new Date().getFullYear();
+$('.title .yr').textContent = `(’${String(YEAR).slice(-2)})`;
+$('.foot .year').textContent = YEAR;
 
 /* ---------- boot ---------- */
 applyStrings();
