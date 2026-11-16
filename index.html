@@ -1018,10 +1018,21 @@ function initPanel() {
           .onfinish = () => { d.style.transform = ''; d.style.opacity = ''; };
       });
     }
-    mhCard.classList.toggle('in-view', e.isIntersecting);
-    if (!mh.isConnected) return;
-    if (e.isIntersecting && !reduced()) mh.play().catch(() => {}); else mh.pause();
   }, { threshold: 0.3 }).observe(panel);
+
+  // MetaHuman video: play only while its own card is on screen. On phone the card sits
+  // off to the side inside the swipe track, and Safari will not start a video it cannot
+  // see, so the card itself is observed (not the panel). If autoplay is refused
+  // (iOS Low Power Mode), the next tap anywhere on the page starts it.
+  let mhVisible = false;
+  const mhPlay = () => { if (mhVisible && mh.isConnected && mh.paused && !reduced()) mh.play().catch(() => {}); };
+  new IntersectionObserver(([e]) => {
+    mhVisible = e.isIntersecting;
+    mhCard.classList.toggle('in-view', mhVisible);
+    if (!mh.isConnected) return;
+    if (mhVisible) mhPlay(); else mh.pause();
+  }, { threshold: 0.5 }).observe(mhCard);
+  ['touchend', 'click'].forEach(t => addEventListener(t, mhPlay, { passive: true }));
 
   // phone: inner card carousel dots
   const track = $('#p-cards'), dots = $$('.p-dots button');
